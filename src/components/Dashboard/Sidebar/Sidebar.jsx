@@ -22,7 +22,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className='bg-[#F4F6FA] h-screen p-6'>
+    <div className='bg-[#F4F6FA] min-h-screen xl:p-6 overflow-x-hidden min-w-64'>
       <div>
         {/* Logo */}
         <Image
@@ -33,7 +33,7 @@ const Sidebar = () => {
         />
       </div>
 
-      <div className='mt-6 relative'>
+      <div className='mt-4 relative'>
         {/* Dropdown Trigger */}
         <div
           className='focus:border focus:border-b-0 focus:border-gray-300 rounded-t-md w-full cursor-pointer flex items-center justify-between'

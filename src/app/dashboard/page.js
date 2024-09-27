@@ -33,7 +33,7 @@ const Page = () => {
       </div>
       <div className='h-[73vh] overflow-y-auto'>
         <Tabs setFilter={setFilter} />
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 justify-around'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-4 justify-between'>
           {filteredProjects?.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

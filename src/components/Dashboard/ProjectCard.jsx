@@ -4,7 +4,7 @@ import React from "react";
 const ProjectCard = ({project}) => {
   const { title, category, milestone, status } = project || {};
   return (
-    <div className='rounded-md shadow-md p-4'>
+    <div className='rounded-md shadow-md p-4 max-w-[350px] border'>
       {/* Header: Title and Menu Icon */}
       <div>
         <div className='flex justify-between'>
@@ -18,7 +18,7 @@ const ProjectCard = ({project}) => {
         </div>
 
         {/* Custom Progress Bar */}
-        <div className='my-2 flex justify-between items-center'>
+        <div className='my-2 flex flex-wrap justify-between items-center'>
           <div className='flex items-center justify-center'>
             {/* Circles for each step */}
             <div style={stepStyle(true)}></div>
@@ -63,13 +63,13 @@ const stepStyle = (completed) => ({
 
 const lineStyle = {
   height: 3,
-  width: 60,
+  width: 50,
   backgroundColor: "#5876B7", // Blue connecting lines
   display: "inline-block",
 };
 const lineStyle1 = {
   height: 3,
-  width: 60,
+  width: 50,
   backgroundColor: "#DADAD7", // Blue connecting lines
   display: "inline-block",
 };
