@@ -2,8 +2,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import MenuItem from "./Shared/MenuItem";
 import WorkspaceList from "./WorkspaceList";
+import MenuItem from "./Shared/MenuItem";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("Personal");
@@ -114,10 +114,7 @@ const Sidebar = () => {
           <MenuItem label={"Emails"} address={"/dashboard/emails"} />
         </div>
         <hr className='border-gray-300 my-3 h-1' />
-         {
-
-         <WorkspaceList/>
-         } 
+        {<WorkspaceList />}
       </div>
     </div>
   );

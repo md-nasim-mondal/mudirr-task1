@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // For icons
 
-function WorkspaceList() {
-  const [isOpen, setIsOpen] = useState(true); 
-  
+const WorkspaceList = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
     <div>
       {/* Workspaces Header */}
       <div
         className='flex justify-between items-center cursor-pointer'
         onClick={() => setIsOpen(!isOpen)}>
-        <div className="flex items-center gap-2">
+        <div className='flex items-center gap-2'>
           {isOpen ? (
             <FaChevronUp className='text-gray-500' />
           ) : (
@@ -18,7 +18,9 @@ function WorkspaceList() {
           )}
           <span className='font-semibold text-gray-600'>WORKSPACES</span>
         </div>
-        <span className='text-gray-500 bg-[#DADAD7] px-1 rounded-md text-xs'>Coming Soon</span>
+        <span className='text-gray-500 bg-[#DADAD7] px-1 rounded-md text-xs'>
+          Coming Soon
+        </span>
       </div>
 
       {/* Workspaces List */}
@@ -36,19 +38,19 @@ function WorkspaceList() {
       {/* See All */}
       {isOpen && (
         <div className='text-center mt-2'>
-          <a href='#' className='text-[#5876B7] font-semibold'>
+          <a href='#' className='text-[#5876B7] font-semibold text-sm hover:underline'>
             See All
           </a>
         </div>
       )}
     </div>
   );
-}
+};
 
 const workspaces = [
-    "Work Space Name 1",
-    "Work Space Name 2",
-    "Work Space Name 3",
-  ];
+  "Work Space Name 1",
+  "Work Space Name 2",
+  "Work Space Name 3",
+];
 
 export default WorkspaceList;
