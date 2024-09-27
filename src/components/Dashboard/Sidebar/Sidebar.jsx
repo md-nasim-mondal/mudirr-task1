@@ -128,7 +128,7 @@ const Sidebar = () => {
         <div className='my-3'>{<PinnedProjects />}</div>
       </div>
           ) : (<div className='h-[65vh] overflow-y-auto overflow-x-hidden'>
-          "Invited Info Coming soon..."
+          Invited Info Coming soon...
           </div>)
       }
       <div>
