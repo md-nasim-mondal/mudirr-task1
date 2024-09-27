@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import WorkspaceList from "./WorkspaceList";
 import MenuItem from "./Shared/MenuItem";
+import Launchpad from "./Shared/Launchpad";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("Personal");
@@ -100,7 +101,7 @@ const Sidebar = () => {
           Invited
         </button>
       </div>
-      <div className='bg-[#EBF0FA] h-[568px] overflow-y-auto rounded-md p-2'>
+      <div className='bg-[#EBF0FA] h-[60vh] overflow-y-auto overflow-x-hidden rounded-md p-2'>
         <div>
           <MenuItem label={"Dashboard"} address={"/dashboard"} />
           <MenuItem
@@ -113,8 +114,10 @@ const Sidebar = () => {
           />
           <MenuItem label={"Emails"} address={"/dashboard/emails"} />
         </div>
-        <hr className='border-gray-300 my-3 h-1' />
+        <hr className='border-gray-300 my-4 h-1' />
         {<WorkspaceList />}
+        <hr className='border-gray-300 my-4 h-1' />
+        {<Launchpad/>}
       </div>
     </div>
   );

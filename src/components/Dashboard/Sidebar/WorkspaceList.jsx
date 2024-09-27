@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // For icons
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; 
 
 const WorkspaceList = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -25,7 +25,7 @@ const WorkspaceList = () => {
 
       {/* Workspaces List */}
       {isOpen && (
-        <ul className='mt-2 space-y-1 pl-8 pr-2 text-sm'>
+        <ul className='mt-4 space-y-2 pl-8 pr-2 text-sm'>
           {workspaces.map((workspace, index) => (
             <li key={index} className='flex justify-between items-center'>
               <span className='text-[#707066]'>{workspace}</span>
