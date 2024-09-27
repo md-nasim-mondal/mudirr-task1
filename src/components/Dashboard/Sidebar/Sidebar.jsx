@@ -5,6 +5,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import WorkspaceList from "./WorkspaceList";
 import MenuItem from "./Shared/MenuItem";
 import Launchpad from "./Launchpad";
+import PinnedProjects from "./PinnedProjects";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("Personal");
@@ -101,7 +102,7 @@ const Sidebar = () => {
           Invited
         </button>
       </div>
-      <div className='h-[70vh] overflow-y-auto overflow-x-hidden'>
+      <div className='h-[65vh] overflow-y-auto overflow-x-hidden'>
         <div className="bg-[#EBF0FA] rounded-md p-2">
           <div>
             <MenuItem label={"Dashboard"} address={"/dashboard"} />
@@ -119,6 +120,10 @@ const Sidebar = () => {
           {<WorkspaceList />}
           <hr className='border-gray-300 my-3 h-1' />
           {<Launchpad />}
+        </div>
+        <div className="my-3">
+
+        {<PinnedProjects/>}
         </div>
       </div>
     </div>

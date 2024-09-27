@@ -16,7 +16,7 @@ const Launchpad = () => {
           ) : (
             <FaChevronDown className='text-gray-500' />
           )}
-          <span className='font-semibold text-gray-600'>LAUNCHPAD</span>
+          <span className='font-semibold text-gray-600 uppercase'>LAUNCHPAD</span>
         </div>
       </div>
 

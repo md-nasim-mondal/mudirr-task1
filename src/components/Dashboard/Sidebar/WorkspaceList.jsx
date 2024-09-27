@@ -16,7 +16,7 @@ const WorkspaceList = () => {
           ) : (
             <FaChevronDown className='text-gray-500' />
           )}
-          <span className='font-semibold text-gray-600'>WORKSPACES</span>
+          <span className='font-semibold text-gray-600 uppercase'>WORKSPACES</span>
         </div>
         <span className='text-gray-500 bg-[#DADAD7] px-1 rounded-md text-xs'>
           Coming Soon
