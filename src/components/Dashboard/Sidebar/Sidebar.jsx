@@ -102,7 +102,11 @@ const Sidebar = () => {
           Invited
         </button>
       </div>
-      <div className='h-[65vh] overflow-y-auto overflow-x-hidden'>
+      {
+        activeTab === "Personal" ?
+
+     (
+     <div className='h-[65vh] overflow-y-auto overflow-x-hidden'>
         <div className='bg-[#EBF0FA] rounded-md p-2'>
           <div>
             <MenuItem label={"Dashboard"} address={"/dashboard"} />
@@ -123,6 +127,10 @@ const Sidebar = () => {
         </div>
         <div className='my-3'>{<PinnedProjects />}</div>
       </div>
+          ) : (<div className='h-[65vh] overflow-y-auto overflow-x-hidden'>
+          "Invited Info Coming soon..."
+          </div>)
+      }
       <div>
         <hr className='border-gray-300 mb-3 h-1' />
         <MenuItem label={"Account Settings"} address={"/account-settings"} />
