@@ -3,15 +3,15 @@ import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Launchpad = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [launchpadIsOpen, setLaunchpadIsOpen] = useState(true);
   return (
     <div>
       {/* Launchpad Header */}
       <div
         className='cursor-pointer'
-        onClick={() => setIsOpen(!isOpen)}>
+        onClick={() => setLaunchpadIsOpen(!launchpadIsOpen)}>
         <div className='flex items-center gap-2'>
-          {isOpen ? (
+          {launchpadIsOpen ? (
             <FaChevronUp className='text-gray-500' />
           ) : (
             <FaChevronDown className='text-gray-500' />
@@ -21,8 +21,8 @@ const Launchpad = () => {
       </div>
 
       {/* Businesses List */}
-      {isOpen && (
-        <ul className='mt-4 space-y-2 pl-2 pr-2 text-sm'>
+      {launchpadIsOpen && (
+        <ul className='mt-2 space-y-1 pl-2 pr-2 text-sm'>
           {businesses?.map((business, index) => (
             <li key={index} className='flex justify-between items-center'>
               <span className="flex gap-2 items-center">
@@ -41,7 +41,7 @@ const Launchpad = () => {
       )}
 
       {/* See All */}
-      {isOpen && (
+      {launchpadIsOpen && (
         <div className='text-center mt-2'>
           <a
             href='#'

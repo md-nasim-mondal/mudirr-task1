@@ -10,7 +10,7 @@ const MenuItem = ({ label, address }) => {
   return (
     <Link
       href={address}
-      className={`flex items-center px-4 py-1.5 my-1.5 rounded-md transition-colors duration-300 transform hover:bg-gray-300 hover:text-gray-700 ${
+      className={`flex items-center px-4 py-1 my-1 rounded-md transition-colors duration-300 transform hover:bg-gray-300 hover:text-gray-700 ${
         isActive ? "bg-white text-[#050504] font-semibold" : "text-[#707066] "
       }`}>
       <span>
