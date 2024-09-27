@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Muddirr | Home",
+  title: "Muddirr | Dashboard",
   description: "Muddirr Front-End Task",
   icons: "/assets/Logo.svg",
 };
