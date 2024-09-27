@@ -7,7 +7,7 @@ const Tabs = ({ setFilter }) => {
   const tabs = ["Ongoing", "Completed", "Cancelled", "Drafts"];
 
   return (
-    <div className='flex justify-between gap-8 items-center pr-16'>
+    <div className='flex justify-between gap-8 items-center'>
       <div className='border-b'>
         {tabs.map((tab) => (
           <button

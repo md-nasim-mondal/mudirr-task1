@@ -4,7 +4,7 @@ import React from "react";
 const ProjectCard = ({project}) => {
   const { title, category, milestone, status } = project || {};
   return (
-    <div className='rounded-md shadow-md p-4 w-[312px]'>
+    <div className='rounded-md shadow-md p-6'>
       {/* Header: Title and Menu Icon */}
       <div>
         <div className='flex justify-between'>

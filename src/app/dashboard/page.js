@@ -8,9 +8,9 @@ const Page = () => {
   const filteredProjects = projects.filter((project) => project.status === filter);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto p-8">
       <Tabs setFilter={setFilter} />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 justify-around">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 justify-around">
         {filteredProjects?.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
