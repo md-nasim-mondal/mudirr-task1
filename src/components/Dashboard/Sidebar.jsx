@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import MenuItem from "./Shared/MenuItem";
+import WorkspaceList from "./WorkspaceList";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("Personal");
@@ -44,7 +46,9 @@ const Sidebar = () => {
               className='rounded-full'
             />
             <div className='ml-2'>
-              <p className='font-semibold text-[#050504] text-base'>{selectedAccount?.name}</p>
+              <p className='font-semibold text-[#050504] text-base'>
+                {selectedAccount?.name}
+              </p>
               <p className='text-sm text-[#3C3C34] text-[14px] truncate'>
                 {selectedAccount?.email}
               </p>
@@ -95,6 +99,25 @@ const Sidebar = () => {
           onClick={() => setActiveTab("Invited")}>
           Invited
         </button>
+      </div>
+      <div className='bg-[#EBF0FA] h-[568px] overflow-y-auto rounded-md p-2'>
+        <div>
+          <MenuItem label={"Dashboard"} address={"/dashboard"} />
+          <MenuItem
+            label={"Project History"}
+            address={"/dashboard/project-history"}
+          />
+          <MenuItem
+            label={"Client History"}
+            address={"/dashboard/client-history"}
+          />
+          <MenuItem label={"Emails"} address={"/dashboard/emails"} />
+        </div>
+        <hr className='border-gray-300 my-3 h-1' />
+         {
+
+         <WorkspaceList/>
+         } 
       </div>
     </div>
   );
