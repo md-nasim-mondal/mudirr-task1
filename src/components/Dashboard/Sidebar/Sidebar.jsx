@@ -103,7 +103,7 @@ const Sidebar = () => {
         </button>
       </div>
       <div className='h-[65vh] overflow-y-auto overflow-x-hidden'>
-        <div className="bg-[#EBF0FA] rounded-md p-2">
+        <div className='bg-[#EBF0FA] rounded-md p-2'>
           <div>
             <MenuItem label={"Dashboard"} address={"/dashboard"} />
             <MenuItem
@@ -121,9 +121,13 @@ const Sidebar = () => {
           <hr className='border-gray-300 my-3 h-1' />
           {<Launchpad />}
         </div>
-        <div className="my-3">
-
-        {<PinnedProjects/>}
+        <div className='my-3'>{<PinnedProjects />}</div>
+      </div>
+      <div>
+        <hr className='border-gray-300 mb-3 h-1' />
+        <MenuItem label={"Account Settings"} address={"/account-settings"} />
+        <div>
+          <MenuItem label={"Logout"} />
         </div>
       </div>
     </div>
