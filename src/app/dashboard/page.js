@@ -11,7 +11,7 @@ const Page = () => {
   );
 
   return (
-    <div className='container mx-auto py-8 p-6'>
+    <div className='container mx-auto pt-8 px-6'>
       <div className='space-y-2'>
         <h2 className='font-bold text-3xl text-[#050504]'>
           Welcome Back, Haseena!
@@ -20,8 +20,8 @@ const Page = () => {
           You have accomplished a lot today. Let us handle the rest.
         </p>
       </div>
-      <div className='flex gap-12 my-6'>
-        {statuses?.map(({ id, img, title, totalNumber}) => (
+      <div className='flex flex-wrap gap-4 md:gap-6 lg:gap-12 my-6'>
+        {statuses?.map(({ id, img, title, totalNumber }) => (
           <div key={id} className='flex gap-2'>
             <Image src={img} alt='Folder-image' width={40} height={5} />
             <p className='flex flex-col'>
@@ -31,7 +31,7 @@ const Page = () => {
           </div>
         ))}
       </div>
-      <div>
+      <div className='h-[73vh] overflow-y-auto'>
         <Tabs setFilter={setFilter} />
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 justify-around'>
           {filteredProjects?.map((project) => (
@@ -49,6 +49,37 @@ const Page = () => {
             </>
           )}
         </div>
+      </div>
+      <div className='flex flex-wrap gap-4 md:gap-6 lg:gap-12 mt-2'>
+        <p className='flex gap-2 items-center'>
+          <Image
+            src='/assets/images/documentation.png'
+            alt='documentation'
+            width={30}
+            height={10}
+          />
+          <span className='text-[#3C3C34] font-bold'>
+            Explore Documentation
+          </span>
+        </p>
+        <p className='flex gap-2 items-center'>
+          <Image
+            src='/assets/images/Calculate.png'
+            alt='Calculator-Icon'
+            width={30}
+            height={10}
+          />
+          <span className='text-[#3C3C34] font-bold'>Cost Calculator</span>
+        </p>
+        <p className='flex gap-2 items-center'>
+          <Image
+            src='/assets/images/Calculate.png'
+            alt='Calculator-Icon'
+            width={30}
+            height={10}
+          />
+          <span className='text-[#3C3C34] font-bold'>Billing Calculator</span>
+        </p>
       </div>
     </div>
   );
