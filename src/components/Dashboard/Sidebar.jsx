@@ -37,16 +37,16 @@ const Sidebar = () => {
           tabIndex={0}>
           <div className='flex items-center'>
             <Image
-              src={selectedAccount.image}
+              src={selectedAccount?.image}
               width={40}
               height={40}
-              alt={selectedAccount.name}
+              alt={selectedAccount?.name}
               className='rounded-full'
             />
             <div className='ml-2'>
-              <p className='font-semibold'>{selectedAccount.name}</p>
-              <p className='text-sm text-gray-500 truncate'>
-                {selectedAccount.email}
+              <p className='font-semibold text-[#050504] text-base'>{selectedAccount?.name}</p>
+              <p className='text-sm text-[#3C3C34] text-[14px] truncate'>
+                {selectedAccount?.email}
               </p>
             </div>
           </div>
