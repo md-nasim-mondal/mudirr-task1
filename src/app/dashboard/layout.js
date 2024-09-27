@@ -6,7 +6,9 @@ const DashboardLayout = ({ children }) => {
       <div>
         <Sidebar></Sidebar>
       </div>
-      <div className="col-span-5">{children}</div>
+      <div className="col-span-5">
+        {children}
+      </div>
     </div>
   );
 };
